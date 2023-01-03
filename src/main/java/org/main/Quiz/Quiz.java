@@ -1,5 +1,6 @@
 package org.main.Quiz;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -48,8 +49,10 @@ public class Quiz {
                 money += 5;
             }
             answer = "";
+
         }
         return money;
+
     }
 }
 
