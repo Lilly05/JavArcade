@@ -15,7 +15,6 @@ public class Quiz {
     public int getMoney() {
         return money;
     }
-
     public void setMoney(int money) {
         this.money = money;
     }
@@ -36,14 +35,19 @@ public class Quiz {
 
     public int answerQuestions(ArrayList<String[]> questions){
         Scanner scanner = new Scanner(System.in);
+        String answer = "";
         int money = 0;
         for (String[] question : questions){
             System.out.println(question[0]);
             System.out.println(question[1]);
-            String answer = scanner.next().toUpperCase();
+            while(!(answer.equals("A") || answer.equals("B") || answer.equals("C"))){
+                System.out.println("Please enter A, B or C");
+                answer = scanner.next().toUpperCase();
+            }
             if(answer.equals(question[2])){
                 money += 5;
             }
+            answer = "";
         }
         return money;
     }
