@@ -21,6 +21,11 @@ public class Questions implements QuestionsInterface {
         this.questions = getRandomQuestions(10);
     }
 
+    /**
+     * getRandomQuestions
+     * @param amount the amount of questions you want to get back
+     * @return ArrayList<String[]> with the amount of questions
+     */
     @Override
     public ArrayList<String[]> getRandomQuestions(int amount) {
         ArrayList<String[]> chosenQuestions = new ArrayList<>();
