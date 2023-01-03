@@ -37,18 +37,14 @@ public class Quiz {
     public int answerQuestions(ArrayList<String[]> questions){
         Scanner scanner = new Scanner(System.in);
         int money = 0;
-        int i = 1;
         for (String[] question : questions){
-            i++;
             System.out.println(question[0]);
             System.out.println(question[1]);
             String answer = scanner.next().toUpperCase();
-            System.out.println(answer);
             if(answer.equals(question[2])){
                 money += 5;
             }
         }
-        System.out.println(i);
         return money;
     }
 }
