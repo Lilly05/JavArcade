@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 public class Questions implements QuestionsInterface {
-    ArrayList<String[]> questions;
+    private ArrayList<String[]> questions;
 
     public Questions() {
         this.questions = getRandomQuestions(10);
