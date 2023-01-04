@@ -1,34 +1,33 @@
 package org.main.Quiz;
 
-import org.main.Interface.QuestionsInterface;
-import org.main.Main;
+import org.main.Interface.InputForArrayListInterface;
 
 import java.util.*;
-import java.util.stream.IntStream;
 
-public class Questions implements QuestionsInterface {
+public class Questions implements InputForArrayListInterface {
     private ArrayList<String[]> questions;
 
-    public Questions() {
-        this.questions = getRandomQuestions(10);
+    public Questions(int amount) {
+        this.questions = new ArrayList<>();
+        this.setQuestions(amount);
     }
 
     public ArrayList<String[]> getQuestions() {
         return this.questions;
     }
 
-    public void setQuestions(ArrayList<String> questions) {
-        this.questions = getRandomQuestions(10);
+    public void setQuestions(int amount) {
+        setInputForArrayList(amount);
     }
 
     /**
-     * getRandomQuestions
+     * setInputForArrayList
+     * Method of Interface InputForArrayListInterface
      * @param amount the amount of questions you want to get back
-     * @return ArrayList<String[]> with the amount of questions
      */
+
     @Override
-    public ArrayList<String[]> getRandomQuestions(int amount) {
-        ArrayList<String[]> chosenQuestions = new ArrayList<>();
+    public void setInputForArrayList(int amount) {
         ArrayList<String[]> allQuestions = new ArrayList<>();
         Collections.addAll(allQuestions,
                 new String[]{"Do you like cats?", "A)No B)Yes C)No" ,"B"},
@@ -50,9 +49,8 @@ public class Questions implements QuestionsInterface {
         for (int i = 0; i < amount; i++){
             Random random = new Random();
             int randomNumber = random.nextInt(allQuestions.size());
-            chosenQuestions.add(allQuestions.get(randomNumber));
+            this.questions.add(allQuestions.get(randomNumber));
             allQuestions.remove(randomNumber);
         }
-        return chosenQuestions;
     }
 }

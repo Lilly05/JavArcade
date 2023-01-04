@@ -1,26 +1,35 @@
 package org.main.Rewards;
 
+import org.main.Interface.InputForArrayListInterface;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Rewards {
+public class Rewards implements InputForArrayListInterface {
     private ArrayList<String[]> rewards;
 
     public Rewards(int money) {
         this.rewards = new ArrayList<>();
-        getRewardByPrice(money);
-
+        this.setRewards(money);
     }
 
     public ArrayList<String[]> getRewards() {
         return rewards;
     }
 
-    public void setRewards(ArrayList<String[]> rewards) {
-        this.rewards = rewards;
+    public void setRewards(int money) {
+        setInputForArrayList(money);
     }
 
-    public void getRewardByPrice(int money){
+    /**
+     * setInputForArrayList
+     * Method of Interface InputForArrayListInterface
+     * @param money (in Interface called amount but we changed the name in this usage for more understandable code)
+     *              the maximum price a reward can cost
+     */
+
+    @Override
+    public void setInputForArrayList(int money){
         ArrayList<String[]> allRewards = new ArrayList<>();
         Collections.addAll(allRewards,
                 new String[]{"Minion Plushie1", "5"},

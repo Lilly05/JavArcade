@@ -8,8 +8,8 @@ public class Quiz {
     private int money;
     private Questions questions;
 
-    public Quiz(){
-        this.questions = new Questions();
+    public Quiz(int amount){
+        this.setQuestions(amount);
         this.money = answerQuestions(questions.getQuestions());
     }
 
@@ -24,14 +24,14 @@ public class Quiz {
         return questions.getQuestions();
     }
 
-    public void setQuestions() {
-        this.questions = new Questions();
+    public void setQuestions(int amount) {
+        this.questions = new Questions(amount);
     }
 
     /**
      " answerQuestions
      * @param questions all the questions including the answers
-     * @return the money the player earned by answering the questions
+     * @return int the money the player earned by answering the questions
      */
 
     public int answerQuestions(ArrayList<String[]> questions){
