@@ -1,23 +1,22 @@
 package org.main.Quiz;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Quiz {
-    private int money;
+    private int jarCoins;
     private Questions questions;
 
     public Quiz(int amount){
         this.setQuestions(amount);
-        this.money = answerQuestions(questions.getQuestions());
+        this.jarCoins = answerQuestions(questions.getQuestions());
     }
 
-    public int getMoney() {
-        return money;
+    public int getJarCoins() {
+        return jarCoins;
     }
-    public void setMoney(int money) {
-        this.money = money;
+    public void setJarCoins(int jarCoins) {
+        this.jarCoins = jarCoins;
     }
 
     public ArrayList<String[]> getQuestions() {
@@ -37,7 +36,7 @@ public class Quiz {
     public int answerQuestions(ArrayList<String[]> questions){
         Scanner scanner = new Scanner(System.in);
         String answer = "";
-        int money = 0;
+        int jarCoins = 0;
         for (String[] question : questions){
             System.out.println(question[0]);
             System.out.println(question[1]);
@@ -46,12 +45,15 @@ public class Quiz {
                 answer = scanner.next().toUpperCase();
             }
             if(answer.equals(question[2])){
-                money += 5;
+                jarCoins += 5;
+                System.out.println("Correct! You earned 5 JarCoins!\nYour current balance: " + jarCoins + "\n");
+            }else{
+                System.out.println("Incorrect! You didn't earn any JarCoins.\nYour current balance: " + jarCoins + "\n");
             }
             answer = "";
 
         }
-        return money;
+        return jarCoins;
 
     }
 }

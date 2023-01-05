@@ -30,25 +30,38 @@ public class Rewards implements InputForArrayListInterface {
 
     @Override
     public void setInputForArrayList(int money){
+        this.rewards = new ArrayList<>();
         ArrayList<String[]> allRewards = new ArrayList<>();
         Collections.addAll(allRewards,
-                new String[]{"Minion Plushie1", "5"},
-                new String[]{"Minion Plushie2", "5"},
-                new String[]{"Minion Plushie3", "5"},
-                new String[]{"Minion Plushie4", "5"},
-                new String[]{"Minion Plushie5", "10"},
-                new String[]{"Minion Plushie6", "10"},
-                new String[]{"Minion Plushie7", "10"},
-                new String[]{"Minion Plushie8", "10"},
-                new String[]{"Minion Plushie9", "15"},
-                new String[]{"Minion Plushie10", "20"},
-                new String[]{"Minion Plushie11", "20"}
+                new String[]{"Pencil", "5"},
+                new String[]{"El Toni", "5"},
+                new String[]{"Haribo", "5"},
+                new String[]{"Minecraft MousePad", "10"},
+                new String[]{"Shrek T-Shirt", "10"},
+                new String[]{"Totebag", "10"},
+                new String[]{"Minion Plushie", "15"},
+                new String[]{"FIFA Pack", "15"},
+                new String[]{"Legendary Fortnite Skin", "15"},
+                new String[]{"Razer Headphones", "20"},
+                new String[]{"JBL BOOM Box", "20"},
+                new String[]{"Gaming Mouse", "20"},
+                new String[]{"36inch Monitor", "25"},
+                new String[]{"Gaming Keyboard", "25"},
+                new String[]{"TV", "30"},
+                new String[]{"E-Scooter", "30"},
+                new String[]{"Opel Corsa", "35"},
+                new String[]{"Gold Bar", "35"},
+                new String[]{"Helicopter", "40"},
+                new String[]{"F1 Racecar", "40"},
+                new String[]{"Private Jet", "45"},
+                new String[]{"Yacht", "45"},
+                new String[]{"Star Destroyer in Reallife", "50"},
+                new String[]{"Living in Hogwarts", "50"}
         );
         for (String[] reward : allRewards) {
             int price = Integer.parseInt(reward[1]);
             if (price <= money) {
-                System.out.println(reward[0]);
-                System.out.println(reward[1]);
+
                 this.rewards.add(reward);
             }
         }
