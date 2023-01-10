@@ -1,17 +1,16 @@
-package org.main.Quiz;
+package org.main.Questions;
 
 import org.main.Colors.Colors;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Quiz {
+public class Quiz extends Questions {
     private int jarCoins;
-    private Questions questions;
+    private Questions questions = new Questions();
 
     public Quiz(int amount){
-        this.setQuestions(amount);
+        super(amount);
         this.jarCoins = answerQuestions(questions.getQuestions());
     }
 
@@ -23,11 +22,11 @@ public class Quiz {
     }
 
     public ArrayList<String[]> getQuestions() {
-        return questions.getQuestions();
+        return super.getQuestions();
     }
 
     public void setQuestions(int amount) {
-        this.questions = new Questions(amount);
+        super.setQuestions(amount);
     }
 
     /**

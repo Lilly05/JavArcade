@@ -1,6 +1,5 @@
-package org.main.Quiz;
+package org.main.Questions;
 
-import org.main.Colors.Colors;
 import org.main.Interface.InputForArrayListInterface;
 
 import java.util.*;
@@ -10,6 +9,10 @@ public class Questions implements InputForArrayListInterface {
 
     public Questions(int amount) {
         this.setQuestions(amount);
+    }
+
+    public Questions(){
+        this.setQuestions(10); // per default 10 questions are chosen
     }
 
     public ArrayList<String[]> getQuestions() {

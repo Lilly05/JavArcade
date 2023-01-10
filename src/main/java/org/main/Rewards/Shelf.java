@@ -5,20 +5,20 @@ import org.main.Colors.Colors;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Shelf {
-    private Rewards rewards;
+public class Shelf extends Rewards{
+    private Rewards rewards = new Rewards();
     private ArrayList<String[]> earnedRewards = new ArrayList<>();
 
     public Shelf(int jarCoins) {
-        this.rewards = new Rewards(jarCoins);
+        super(jarCoins);
     }
 
     public ArrayList<String[]> getRewards() {
-        return rewards.getRewards();
+        return super.getRewards();
     }
 
-    public void setRewards(Rewards rewards) {
-        this.rewards = rewards;
+    public void setRewards(int jarCoins) {
+        super.setRewards(jarCoins);
     }
 
     public ArrayList<String[]> getEarnedRewards() {

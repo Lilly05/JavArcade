@@ -12,6 +12,10 @@ public class Rewards implements InputForArrayListInterface {
         this.setRewards(jarCoins);
     }
 
+    public Rewards(){
+        this.setRewards(0); // per default no rewards can be won
+    }
+
     public ArrayList<String[]> getRewards() {
         return new ArrayList<>(this.rewards);
     }
