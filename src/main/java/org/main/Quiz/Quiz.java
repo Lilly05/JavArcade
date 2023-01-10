@@ -1,5 +1,8 @@
 package org.main.Quiz;
 
+import org.main.Colors.Colors;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -38,17 +41,17 @@ public class Quiz {
         String answer = "";
         int jarCoins = 0;
         for (String[] question : questions){
-            System.out.println(question[0]);
-            System.out.println(question[1]);
+            System.out.println(Colors.PURPLE + question[0]);
+            System.out.println(Colors.RESET + question[1]);
             while(!(answer.equals("A") || answer.equals("B") || answer.equals("C"))){
                 System.out.println("Please enter A, B or C");
                 answer = scanner.next().toUpperCase();
             }
             if(answer.equals(question[2])){
                 jarCoins += 5;
-                System.out.println("Correct! You earned 5 JarCoins!\nYour current balance: " + jarCoins + "\n");
+                System.out.println(Colors.TEAL + "Correct! You earned 5 JarCoins!\nYour current balance: " + jarCoins + "\n");
             }else{
-                System.out.println("Incorrect! You didn't earn any JarCoins.\nYour current balance: " + jarCoins + "\n");
+                System.out.println(Colors.RED + "Incorrect! You didn't earn any JarCoins.\nYour current balance: " + jarCoins + "\n");
             }
             answer = "";
 
