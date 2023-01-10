@@ -7,8 +7,8 @@ public class Shelf {
     private Rewards rewards;
     private ArrayList<String[]> earnedRewards = new ArrayList<>();
 
-    public Shelf(int money) {
-        this.rewards = new Rewards(money);
+    public Shelf(int jarCoins) {
+        this.rewards = new Rewards(jarCoins);
     }
 
     public ArrayList<String[]> getRewards() {

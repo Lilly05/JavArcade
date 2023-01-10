@@ -30,7 +30,7 @@ public class Quiz {
     /**
      " answerQuestions
      * @param questions all the questions including the answers
-     * @return int the money the player earned by answering the questions
+     * @return int the jarCoins the player earned by answering the questions
      */
 
     public int answerQuestions(ArrayList<String[]> questions){
@@ -54,7 +54,6 @@ public class Quiz {
 
         }
         return jarCoins;
-
     }
 }
 

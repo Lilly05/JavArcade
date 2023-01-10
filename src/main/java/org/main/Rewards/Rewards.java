@@ -8,27 +8,27 @@ import java.util.Collections;
 public class Rewards implements InputForArrayListInterface {
     private ArrayList<String[]> rewards = new ArrayList<>();
 
-    public Rewards(int money) {
-        this.setRewards(money);
+    public Rewards(int jarCoins) {
+        this.setRewards(jarCoins);
     }
 
     public ArrayList<String[]> getRewards() {
         return new ArrayList<>(this.rewards);
     }
 
-    public void setRewards(int money) {
-        setInputForArrayList(money);
+    public void setRewards(int jarCoins) {
+        setInputForArrayList(jarCoins);
     }
 
     /**
      * setInputForArrayList
      * Method of Interface InputForArrayListInterface
-     * @param money (in Interface called amount but we changed the name in this usage for more understandable code)
+     * @param jarCoins (in Interface called amount but we changed the name in this usage for more understandable code)
      *              the maximum price a reward can cost
      */
 
     @Override
-    public void setInputForArrayList(int money){
+    public void setInputForArrayList(int jarCoins){
         this.rewards = new ArrayList<>();
         ArrayList<String[]> allRewards = new ArrayList<>();
         Collections.addAll(allRewards,
@@ -59,7 +59,7 @@ public class Rewards implements InputForArrayListInterface {
         );
         for (String[] reward : allRewards) {
             int price = Integer.parseInt(reward[1]);
-            if (price <= money) {
+            if (price <= jarCoins) {
 
                 this.rewards.add(reward);
             }
