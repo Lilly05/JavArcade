@@ -14,6 +14,10 @@ public class Quiz extends Questions {
         this.jarCoins = answerQuestions(questions.getQuestions());
     }
 
+    public Quiz(){
+        this.jarCoins = 0;
+    }
+
     public int getJarCoins() {
         return jarCoins;
     }
@@ -48,7 +52,7 @@ public class Quiz extends Questions {
             }
             if(answer.equals(question[2])){
                 jarCoins += 5;
-                System.out.println(Colors.TEAL + "Correct! You earned 5 JarCoins!\nYour current balance: " + jarCoins + "\n");
+                System.out.println(Colors.TEAL + "Correct! You earned 5 JarCoins!\n" + Colors.RESET +"Your current balance: " + jarCoins + "\n");
             }else{
                 System.out.println(Colors.RED + "Incorrect! You didn't earn any JarCoins.\nYour current balance: " + jarCoins + "\n");
             }
