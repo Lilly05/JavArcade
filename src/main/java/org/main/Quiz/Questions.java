@@ -6,15 +6,14 @@ import org.main.Interface.InputForArrayListInterface;
 import java.util.*;
 
 public class Questions implements InputForArrayListInterface {
-    private ArrayList<String[]> questions;
+    private ArrayList<String[]> questions = new ArrayList<>();
 
     public Questions(int amount) {
-        this.questions = new ArrayList<>();
         this.setQuestions(amount);
     }
 
     public ArrayList<String[]> getQuestions() {
-        return this.questions;
+        return new ArrayList<>(this.questions);
     }
 
     public void setQuestions(int amount) {

@@ -6,15 +6,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Rewards implements InputForArrayListInterface {
-    private ArrayList<String[]> rewards;
+    private ArrayList<String[]> rewards = new ArrayList<>();
 
     public Rewards(int money) {
-        this.rewards = new ArrayList<>();
         this.setRewards(money);
     }
 
     public ArrayList<String[]> getRewards() {
-        return rewards;
+        return new ArrayList<>(this.rewards);
     }
 
     public void setRewards(int money) {
