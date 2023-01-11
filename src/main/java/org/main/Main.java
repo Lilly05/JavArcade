@@ -7,8 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Quiz quiz = new Quiz(10);
         Shelf shelf = new Shelf(quiz.getJarCoins());
-        shelf.drawShelf(shelf.getRewards());
-        shelf.chooseReward(quiz.getJarCoins(), shelf.getRewards());
     }
 
 }
