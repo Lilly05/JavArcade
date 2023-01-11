@@ -57,12 +57,10 @@ public class JavArcadeTests {
 
     @Test
     public void testChooseReward(){
+        Rewards rewards = new Rewards(5);
         String input = "1";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         Shelf shelf = new Shelf(5);
-        ArrayList<String[]> rewards = new ArrayList<>();
-        rewards.add(new String[]{"Test", "5"});
-        shelf.chooseReward(5, rewards);
         assertEquals(1, shelf.getEarnedRewards().size());
     }
 
