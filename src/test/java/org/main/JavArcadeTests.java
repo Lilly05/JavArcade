@@ -1,10 +1,9 @@
 package org.main;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.main.Questions.Questions;
 import org.main.Questions.Quiz;
-import org.main.Rewards.Rewards;
+import org.main.Rewards.Reward;
 import org.main.Rewards.Shelf;
 
 import java.io.ByteArrayInputStream;
@@ -31,8 +30,8 @@ public class JavArcadeTests {
     
     @Test
     public void testAmountOfRewards(){
-        Rewards rewards = new Rewards(15);
-        assertEquals(9, rewards.getRewards().size());
+        Reward reward = new Reward(15);
+        assertEquals(9, reward.getRewards().size());
     }
 
     /**
@@ -57,7 +56,7 @@ public class JavArcadeTests {
 
     @Test
     public void testChooseReward(){
-        Rewards rewards = new Rewards(5);
+        Reward reward = new Reward(5);
         String input = "1";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         Shelf shelf = new Shelf(5);

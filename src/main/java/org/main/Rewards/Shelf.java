@@ -1,27 +1,21 @@
 package org.main.Rewards;
 
 import org.main.Colors.ConsoleColors;
+import org.main.Rewards.RewardTypes.BigReward;
+import org.main.Rewards.RewardTypes.MediumReward;
+import org.main.Rewards.RewardTypes.SmallReward;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Shelf{
-    private Rewards rewards;
+    Reward reward;
     private ArrayList<String[]> earnedRewards = new ArrayList<>();
 
     public Shelf(int jarCoins) {
-        this.rewards = new Rewards(jarCoins);
-        this.drawShelf(rewards.getRewards(), jarCoins);
-        this.chooseReward(jarCoins, rewards.getRewards());
-    }
-
-    public ArrayList<String[]> getRewards() {
-        return this.rewards.getRewards();
-    }
-
-    public void setRewards() {
-        this.rewards.setRewards();
+        this.reward = new Reward(jarCoins);
+        this.drawShelf(reward.getRewards(), jarCoins);
+        this.chooseReward(jarCoins, reward.getRewards());
     }
 
     public ArrayList<String[]> getEarnedRewards() {
@@ -112,9 +106,9 @@ public class Shelf{
             System.out.println("Do you want to choose more rewards? YES / NO");
             String answer = scanner.next().toUpperCase();
             if (answer.equals("YES")) {
-                this.rewards = new Rewards(jarCoins);
-                drawShelf(this.rewards.getRewards(), jarCoins);
-                chooseReward(jarCoins, this.rewards.getRewards());
+                this.reward = new Reward(jarCoins);
+                drawShelf(this.reward.getRewards(), jarCoins);
+                chooseReward(jarCoins, this.reward.getRewards());
             } else {
                 goodEnding(earnedRewards);
             }
