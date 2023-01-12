@@ -1,10 +1,7 @@
 package org.main.Rewards.RewardTypes;
 
-import org.main.Interface.InputForArrayListInterface;
 import org.main.Rewards.Reward;
 
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class SmallReward extends Reward {
 
@@ -21,6 +18,11 @@ public class SmallReward extends Reward {
         super.setPrice(price);
     }
 
+    /**
+     * rewardType
+     * Method to define the rewardType (inherited from Reward)
+     * @return String (the rewardType)
+     */
     @Override
     public String rewardType() {
         return "Small";

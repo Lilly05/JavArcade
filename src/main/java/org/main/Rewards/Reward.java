@@ -31,5 +31,11 @@ public abstract class Reward {
         this.price = price;
     }
 
+    /**
+     * rewardType
+     * An abstract method each subclass has to use to define it's rewardType
+     * @return String (the rewardType)
+     */
+
     public abstract String rewardType();
 }

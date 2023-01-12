@@ -21,6 +21,11 @@ public class MediumReward extends Reward {
         super.setPrice(price);
     }
 
+    /**
+     * rewardType
+     * Method to define the rewardType (inherited from Reward)
+     * @return String (the rewardType)
+     */
     @Override
     public String rewardType() {
         return "Medium";

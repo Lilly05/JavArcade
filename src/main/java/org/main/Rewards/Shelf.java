@@ -25,6 +25,7 @@ public class Shelf{
      * drawShelf
      * Method to draw the shelf to the console
      * @param rewards all the rewards that should be shown on the shelf
+     * @param jarCoins the amount of JarCoins the player collected while taking the quiz
      */
     public void drawShelf(ArrayList<Reward> rewards, int jarCoins){
         if (jarCoins == 0){
@@ -61,7 +62,7 @@ public class Shelf{
     /**
      * chooseReward
      * Method to choose the reward you would like to win
-     * @param jarCoins the amount of jarCoins you won while playing the quiz
+     * @param jarCoins the amount of jarCoins you won while taking the quiz
      * @param rewardsInventory all the rewards you could win according to the amount of JarCoins you got
      */
 
@@ -127,7 +128,7 @@ public class Shelf{
 
     /**
      * badEnding
-     * Method to end the game in a bad way when you won 0 jarCoins while playing the quiz
+     * Method to end the game in a bad way when you won 0 JarCoins while taking the quiz
      */
     public void badEnding(){
         System.out.println(ConsoleColors.RED + "Game over! You earned 0 JarCoins.");

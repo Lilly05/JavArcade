@@ -1,9 +1,8 @@
 package org.main;
 
 import org.junit.Test;
-import org.main.Quiz.Questions;
+import org.main.Quiz.Question;
 import org.main.Quiz.Quiz;
-import org.main.Rewards.Reward;
 import org.main.Rewards.Shelf;
 import org.main.Rewards.Shop;
 
@@ -20,8 +19,9 @@ public class JavArcadeTests {
      */
     @Test
     public void testAmountOfQuestions(){
-        Questions questions = new Questions(5);
-        assertEquals(5, questions.getQuestions().size());
+        Quiz quiz = new Quiz();
+        quiz.setQuestions(5);
+        assertEquals(5, quiz.getQuestions().size());
     }
 
     /**
@@ -37,7 +37,7 @@ public class JavArcadeTests {
 
     /**
      * testAnswerQuestions
-     * Method to test if the algorithm to check the user's answer is working correctly
+     * Method to test if the algorithm to check the user's answer is working correctly. It expects to get 5 JarCoins back.
      */
 
     @Test
@@ -45,8 +45,8 @@ public class JavArcadeTests {
         String answer = "A";
         System.setIn(new ByteArrayInputStream(answer.getBytes()));
         Quiz quiz = new Quiz();
-        ArrayList<String[]> question = new ArrayList<>();
-        question.add(new String[]{"Will this test be successful?", "A) Yes B) No C) Maybe", "A"});
+        ArrayList<Question> question = new ArrayList<>();
+        question.add(new Question("Will this test be successful?", "A) Yes B) No C) Maybe", "A"));
         assertEquals(5, quiz.answerQuestions(question));
     }
 
