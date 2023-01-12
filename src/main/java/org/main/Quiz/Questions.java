@@ -1,4 +1,4 @@
-package org.main.Questions;
+package org.main.Quiz;
 
 import org.main.Interface.InputForArrayListInterface;
 

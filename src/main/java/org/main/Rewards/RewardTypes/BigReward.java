@@ -25,18 +25,25 @@ public class BigReward extends Reward implements InputForArrayListInterface {
 
     @Override
     public void setInputForArrayList(int jarCoins) {
-        ArrayList<String[]> allMerchRewards = new ArrayList<>();
-        Collections.addAll(allMerchRewards,
+        ArrayList<String[]> allRewards = new ArrayList<>();
+        Collections.addAll(allRewards,
                 new String[]{"Helicopter", "40"},
                 new String[]{"F1 Racecar", "40"},
                 new String[]{"Private Jet", "45"},
                 new String[]{"Yacht", "45"},
                 new String[]{"Star Destroyer in Reallife", "50"},
                 new String[]{"Living in Hogwarts", "50"});
-        for (String[] merchReward : allMerchRewards){
-            if (Integer.parseInt(merchReward[1]) <= jarCoins){
-                bigRewards.add(merchReward);
+        for (String[] reward : allRewards){
+            if (Integer.parseInt(reward[1]) <= jarCoins){
+                super.setDescription(reward[0]);
+                super.setPrice(reward[1]);
+                bigRewards.add(new String[]{rewardType(), super.getDescription(), super.getPrice()});
             }
         }
+    }
+
+    @Override
+    public String rewardType(){
+        return "Big";
     }
 }

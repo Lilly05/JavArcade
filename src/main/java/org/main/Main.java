@@ -1,6 +1,6 @@
 package org.main;
 
-import org.main.Questions.Quiz;
+import org.main.Quiz.Quiz;
 import org.main.Rewards.Shelf;
 
 public class Main {

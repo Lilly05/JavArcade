@@ -36,10 +36,10 @@ public class Shelf{
             badEnding();
         }
         int counter = 1;
-        String ShelfBorder = "  ____________________________________________________________________________________________________________________________________________________";
+        String ShelfBorder = "  _____________________________________________________________________________________________________________________________________________________________________________________";
         System.out.println(ConsoleColors.RESET + ShelfBorder);
         for (String[] reward : rewards) {
-            System.out.print(ConsoleColors.RESET + " | " + counter + ") " + reward[0] + " " + ConsoleColors.PURPLE + reward[1] + " JarCoins " + ConsoleColors.RESET);
+            System.out.print(ConsoleColors.RESET + " | " + counter + ") " + ConsoleColors.TEAL + reward[0] + " "  + ConsoleColors.RESET + reward[1] + " " + ConsoleColors.PURPLE + reward[2] + " JarCoins " + ConsoleColors.RESET);
             fillString(reward, counter);
             if (counter % 3 == 0) {
                 System.out.print("|\n");
@@ -57,8 +57,8 @@ public class Shelf{
      */
 
     public void fillString(String[] reward, int counter){
-        int length = reward[0].length() + reward[1].length() + Integer.toString(counter).length() + 17;
-        for (int i = length; i <= 50; i++){
+        int length = reward[0].length() + reward[1].length() + reward[2].length() + Integer.toString(counter).length() + 17;
+        for (int i = length; i <= 60; i++){
             System.out.print(" ");
         }
     }
@@ -88,10 +88,10 @@ public class Shelf{
             }
         }
         int chosenReward = input;
-        String[] reward = rewardsInventory.get(chosenReward - 1);
+        String[] reward = rewardsInventory.get(chosenReward-1);
         earnedRewards.add(reward);
-        jarCoins -= Integer.parseInt(reward[1]);
-        System.out.println(ConsoleColors.RESET + "You chose the following reward: " + reward[0] + " \nYou have " + jarCoins + " JarCoins left");
+        jarCoins -= Integer.parseInt(reward[2]);
+        System.out.println(ConsoleColors.RESET + "You chose the following " + reward[0] + " reward: " + reward[1] + " \nYou have " + jarCoins + " JarCoins left");
         playAgain(jarCoins);
     }
 
@@ -125,7 +125,7 @@ public class Shelf{
     public void goodEnding(ArrayList<String[]> earnedRewards){
         System.out.println(ConsoleColors.TEAL + "You won all those rewards: ");
         for (String[] reward : earnedRewards){
-            System.out.println("- " + reward[0]);
+            System.out.println("- " + reward[1]);
         }
         System.out.println("Thanks for playing!");
     }

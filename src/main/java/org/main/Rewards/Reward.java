@@ -17,8 +17,39 @@ public class Reward {
 
     public Reward(){
         this.rewards = new ArrayList<>();
+        this.description = "";
+        this.price = "";
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public ArrayList<String[]> getRewards() {
+        return new ArrayList<>(this.rewards);
+    }
+
+    public void setRewards(ArrayList<String[]> rewards){
+        this.rewards = new ArrayList<>(rewards);
+    }
+
+    /**
+     * availableRewards
+     * Method to check which rewards you can win
+     * @param jarCoins the amount of JarCoins you won while taking the Quiz
+     */
     public void availableRewards(int jarCoins){
         ArrayList<String[]> allRewards = new ArrayList<>();
         if (jarCoins > 0){
@@ -34,18 +65,6 @@ public class Reward {
             allRewards.addAll(bigReward.getBigRewards());
         }
         this.setRewards(allRewards);
-    }
-
-    public ArrayList<String[]> getRewards() {
-        return new ArrayList<>(this.rewards);
-    }
-
-    public void setRewards(ArrayList<String[]> rewards){
-        this.rewards = new ArrayList<>(rewards);
-    }
-
-    public void addRewards(ArrayList<String[]> rewards){
-        this.rewards.addAll(rewards);
     }
 
     public String rewardType(){

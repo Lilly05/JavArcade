@@ -39,10 +39,11 @@ public class SmallReward extends Reward implements InputForArrayListInterface {
         );
         for (String[] reward : allRewards) {
             if (Integer.parseInt(reward[1]) <= jarCoins) {
-                this.smallRewards.add(reward);
+                super.setDescription(reward[0]);
+                super.setPrice(reward[1]);
+                this.smallRewards.add(new String[]{rewardType(), super.getDescription(), super.getPrice()});
             }
         }
-        super.addRewards(this.getSmallRewards());
     }
 
     @Override

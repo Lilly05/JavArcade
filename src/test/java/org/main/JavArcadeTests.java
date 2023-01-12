@@ -1,8 +1,8 @@
 package org.main;
 
 import org.junit.Test;
-import org.main.Questions.Questions;
-import org.main.Questions.Quiz;
+import org.main.Quiz.Questions;
+import org.main.Quiz.Quiz;
 import org.main.Rewards.Reward;
 import org.main.Rewards.Shelf;
 

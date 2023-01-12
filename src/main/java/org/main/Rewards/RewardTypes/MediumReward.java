@@ -25,8 +25,8 @@ public class MediumReward extends Reward implements InputForArrayListInterface {
 
     @Override
     public void setInputForArrayList(int jarCoins) {
-        ArrayList<String[]> allTechnologieRewards = new ArrayList<>();
-        Collections.addAll(allTechnologieRewards,
+        ArrayList<String[]> allRewards = new ArrayList<>();
+        Collections.addAll(allRewards,
                 new String[]{"JBL BOOM Box", "20"},
                 new String[]{"Razer Headphones", "20"},
                 new String[]{"Gaming Mouse", "20"},
@@ -36,11 +36,17 @@ public class MediumReward extends Reward implements InputForArrayListInterface {
                 new String[]{"E-Scooter", "30"},
                 new String[]{"Opel Corsa", "35"},
                 new String[]{"Life sized figure of Batman", "35"});
-        for (String[] technologieReward : allTechnologieRewards){
-            if (Integer.parseInt(technologieReward[1]) <= jarCoins){
-                mediumRewards.add(technologieReward);
+        for (String[] reward : allRewards){
+            if (Integer.parseInt(reward[1]) <= jarCoins){
+                super.setDescription(reward[0]);
+                super.setPrice(reward[1]);
+                mediumRewards.add(new String[]{rewardType(), super.getDescription(), super.getPrice()});
             }
         }
+    }
 
+    @Override
+    public String rewardType(){
+        return "Medium";
     }
 }
