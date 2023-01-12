@@ -10,11 +10,6 @@ public class Questions implements InputForArrayListInterface {
     public Questions(int amount) {
         this.setQuestions(amount);
     }
-
-    public Questions(){
-        this.setQuestions(10); // per default 10 questions are chosen
-    }
-
     public ArrayList<String[]> getQuestions() {
         return new ArrayList<>(this.questions);
     }
@@ -26,7 +21,7 @@ public class Questions implements InputForArrayListInterface {
     /**
      * setInputForArrayList
      * Method of Interface InputForArrayListInterface
-     * @param amount the amount of questions you want to get back
+     * @param amount the amount of questions you want to add to the ArrayList
      */
 
     @Override

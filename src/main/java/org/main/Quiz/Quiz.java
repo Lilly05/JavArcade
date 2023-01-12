@@ -6,12 +6,12 @@ import org.main.Colors.ConsoleColors;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Quiz extends Questions {
+public class Quiz {
     private int jarCoins;
-    private Questions questions = new Questions();
+    private Questions questions;
 
     public Quiz(int amount){
-        super(amount);
+        this.questions = new Questions(amount);
         this.jarCoins = answerQuestions(questions.getQuestions());
     }
 
@@ -27,11 +27,11 @@ public class Quiz extends Questions {
     }
 
     public ArrayList<String[]> getQuestions() {
-        return super.getQuestions();
+        return questions.getQuestions();
     }
 
     public void setQuestions(int amount) {
-        super.setQuestions(amount);
+        questions.setQuestions(amount);
     }
 
     /**

@@ -5,6 +5,7 @@ import org.main.Quiz.Questions;
 import org.main.Quiz.Quiz;
 import org.main.Rewards.Reward;
 import org.main.Rewards.Shelf;
+import org.main.Rewards.Shop;
 
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
@@ -30,8 +31,8 @@ public class JavArcadeTests {
     
     @Test
     public void testAmountOfRewards(){
-        Reward reward = new Reward(15);
-        assertEquals(9, reward.getRewards().size());
+        Shop shop = new Shop(15);
+        assertEquals(9, shop.getRewards().size());
     }
 
     /**
@@ -56,10 +57,10 @@ public class JavArcadeTests {
 
     @Test
     public void testChooseReward(){
-        Reward reward = new Reward(5);
+        Shop shop = new Shop(5);
         String input = "1";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
-        Shelf shelf = new Shelf(5);
+        Shelf shelf = new Shelf(5, shop.getRewards());
         assertEquals(1, shelf.getEarnedRewards().size());
     }
 
