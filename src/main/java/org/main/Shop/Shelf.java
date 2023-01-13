@@ -1,4 +1,4 @@
-package org.main.Rewards;
+package org.main.Shop;
 
 import org.main.Colors.ConsoleColors;
 

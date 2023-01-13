@@ -1,10 +1,4 @@
-package org.main.Rewards;
-
-import org.main.Rewards.RewardTypes.SmallReward;
-import org.main.Rewards.RewardTypes.BigReward;
-import org.main.Rewards.RewardTypes.MediumReward;
-
-import java.util.ArrayList;
+package org.main.Shop;
 
 public abstract class Reward {
     private String description;

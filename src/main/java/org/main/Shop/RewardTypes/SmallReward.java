@@ -1,6 +1,6 @@
-package org.main.Rewards.RewardTypes;
+package org.main.Shop.RewardTypes;
 
-import org.main.Rewards.Reward;
+import org.main.Shop.Reward;
 
 
 public class SmallReward extends Reward {
@@ -9,8 +9,8 @@ public class SmallReward extends Reward {
         super(description, price);
     }
 
-    public String[] getSmallReward(){
-        return new String[]{rewardType(), super.getDescription(), super.getPrice()};
+    public SmallReward getSmallReward(){
+        return new SmallReward(super.getDescription(), super.getPrice());
     }
 
     public void setSmallReward(String description, String price){

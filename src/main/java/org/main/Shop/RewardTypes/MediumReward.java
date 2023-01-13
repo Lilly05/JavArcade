@@ -1,10 +1,6 @@
-package org.main.Rewards.RewardTypes;
+package org.main.Shop.RewardTypes;
 
-import org.main.Interface.InputForArrayListInterface;
-import org.main.Rewards.Reward;
-
-import java.util.ArrayList;
-import java.util.Collections;
+import org.main.Shop.Reward;
 
 public class MediumReward extends Reward {
 
@@ -12,8 +8,8 @@ public class MediumReward extends Reward {
         super(description, price);
     }
 
-    public String[] getMediumReward(){
-        return new String[]{rewardType(), super.getDescription(), super.getPrice()};
+    public MediumReward getMediumReward(){
+        return new MediumReward(super.getDescription(), super.getPrice());
     }
 
     public void setMediumReward(String description, String price){

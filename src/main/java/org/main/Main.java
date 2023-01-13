@@ -1,8 +1,8 @@
 package org.main;
 
 import org.main.Quiz.Quiz;
-import org.main.Rewards.Shelf;
-import org.main.Rewards.Shop;
+import org.main.Shop.Shelf;
+import org.main.Shop.Shop;
 
 public class Main {
     public static void main(String[] args) {

@@ -3,8 +3,8 @@ package org.main;
 import org.junit.Test;
 import org.main.Quiz.Question;
 import org.main.Quiz.Quiz;
-import org.main.Rewards.Shelf;
-import org.main.Rewards.Shop;
+import org.main.Shop.Shelf;
+import org.main.Shop.Shop;
 
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;

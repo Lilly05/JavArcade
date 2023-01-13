@@ -1,14 +1,14 @@
-package org.main.Rewards.RewardTypes;
+package org.main.Shop.RewardTypes;
 
-import org.main.Rewards.Reward;
+import org.main.Shop.Reward;
 
 public class BigReward extends Reward {
     public BigReward(String description, String price){
         super(description, price);
     }
 
-    public String[] getBigReward(){
-        return new String[]{rewardType(), super.getDescription(), super.getPrice()};
+    public BigReward getBigReward(){
+        return new BigReward(super.getDescription(), super.getPrice());
     }
 
     public void setBigReward(String description, String price){

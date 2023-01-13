@@ -1,9 +1,9 @@
-package org.main.Rewards;
+package org.main.Shop;
 
 import org.main.Interface.InputForArrayListInterface;
-import org.main.Rewards.RewardTypes.BigReward;
-import org.main.Rewards.RewardTypes.MediumReward;
-import org.main.Rewards.RewardTypes.SmallReward;
+import org.main.Shop.RewardTypes.BigReward;
+import org.main.Shop.RewardTypes.MediumReward;
+import org.main.Shop.RewardTypes.SmallReward;
 
 import java.util.ArrayList;
 import java.util.Collections;
